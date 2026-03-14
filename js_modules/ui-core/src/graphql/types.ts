@@ -413,10 +413,11 @@ export enum ReexecutionStrategy {
   FROM_FAILURE = 'FROM_FAILURE',
 }
 
-export type ReportAssetCheckEvaluationParams = {
+export type ReportAssetCheckEvaluationsParams = {
   assetKey: AssetKeyInput;
   checkName: Scalars['String']['input'];
-  partition?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  partitionKeys?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   passed: Scalars['Boolean']['input'];
   serializedMetadata?: InputMaybe<Scalars['String']['input']>;
   severity?: InputMaybe<AssetCheckSeverity>;
